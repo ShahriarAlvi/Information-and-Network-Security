@@ -1,0 +1,10 @@
+Task 5 commands:
+
+# MD5
+openssl dgst -md5 ~/Desktop/file.txt
+
+# SHA-256
+openssl dgst -sha256 ~/Desktop/file.txt
+
+# SHA-512
+openssl dgst -sha512 ~/Desktop/file.txt
