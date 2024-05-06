@@ -1,0 +1,30 @@
+Task 6 commands:
+
+Text File:
+With your feet on the air
+And your head on the ground
+Try this trick and spin it, yeah
+
+
+** Short key length
+
+# HMAC-MD5
+openssl dgst -hmac "secret" -md5 -hex ~/Desktop/file.txt
+
+# HMAC-SHA256
+openssl dgst -hmac "secret" -sha256 -hex ~/Desktop/file.txt
+
+# HMAC-SHA1
+openssl dgst -hmac "secret" -sha1 -hex ~/Desktop/file.txt
+
+
+** Long key length
+
+# HMAC-MD5
+openssl dgst -hmac "this_is_a_longer_secret_key" -md5 -hex ~/Desktop/file.txt
+
+# HMAC-SHA256
+openssl dgst -hmac "this_is_a_longer_secret_key" -sha256 -hex ~/Desktop/file.txt
+
+# HMAC-SHA1
+openssl dgst -hmac "this_is_a_longer_secret_key" -sha1 -hex ~/Desktop/file.txt
