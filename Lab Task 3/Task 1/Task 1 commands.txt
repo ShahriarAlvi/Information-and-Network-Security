@@ -1,0 +1,16 @@
+Task 1 commands:
+
+file.txt: 
+With your feet on the air
+And your head on the ground
+Try this trick and spin it, yeah
+
+CBC:
+openssl enc -aes-128-cbc -e -in ~/Desktop/file.txt -out ~/Desktop/output_cbc.bin -K 00112233445566778889aabbccddeeff -iv 0102030405060708                                                                             
+                                                                         
+ECB:
+openssl enc -aes-128-ecb -e -in ~/Desktop/file.txt -out ~/Desktop/output_ecb.bin -K 00112233445566778889aabbccddeef                      
+                                                                             
+CFB:
+openssl enc -aes-128-cfb -e -in ~/Desktop/file.txt -out ~/Desktop/output_cfb.bin -K 00112233445566778889aabbccddeef -iv 0102030405060708
+                                                                             
