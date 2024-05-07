@@ -1,0 +1,28 @@
+Task 4 commands:
+
+test.txt: 
+My name is Shahriar Alvi. The class of 2025.
+
+
+CBC:
+openssl enc -aes-128-cbc -e -in ~/Desktop/test.txt -out ~/Desktop/encrypted_cbc.txt -K 00112233445566778899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f10                                                                            
+                                                                         
+ECB:
+openssl enc -aes-128-ecb -e -in ~/Desktop/test.txt -out ~/Desktop/encrypted_ecb.txt -K 00112233445566778899aabbccddeeff                      
+                                                                             
+CFB:
+openssl enc -aes-128-cfb -e -in ~/Desktop/test.txt -out ~/Desktop/encrypted_cfb.txt -K 00112233445566778899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f10
+
+OFB:
+openssl enc -aes-128-ofb -e -in ~/Desktop/test.txt -out ~/Desktop/encrypted_ofb.txt -K 00112233445566778899aabbccddeeff -iv 0102030405060708090a0b0c0d0e0f10
+
+
+** Discussion:
+
+1. CBC (Cipher Block Chaining) requires padding because it operates on fixed-size blocks and needs complete blocks to work with during encryption.
+
+2. ECB (Electronic Codebook) requires padding for the same reason as CBC – it operates on fixed-size blocks and needs complete blocks to encrypt.
+
+3. CFB (Cipher Feedback) generally does not require padding because it operates on individual bits or bytes rather than fixed-size blocks.
+
+4. OFB (Output Feedback) generally does not require padding for the same reason as CFB – it operates on individual bits or bytes rather than fixed-size blocks.
